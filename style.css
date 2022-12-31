@@ -1,0 +1,166 @@
+@import url(https://fonts.google.com/specimen/Montserrat);
+@import url(https://fonts.google.com/specimen/Fraunces);
+
+/* ///////////////UTILITY\\\\\\\\\\\\\\\ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ///////////////VARIABLES\\\\\\\\\\\\\\\ */
+
+:root {
+    /* BORDER RADIUS */
+    --BUTTON-BORDER-RADIUS: 15px;
+    --CT-BORDER-RADIUS: 15px;
+    --IMG-BORDER-BL-radius: 15px;
+    --IMG-BORDER-TL-radius: 15px;
+
+    /* BOX SHADOW */
+    --BUTTON-HOVER-BOX-SHADOW:#000000cc 0px 5px 15px, inset #00000026 0px -10px 20px;
+
+    /* COLOR */
+    --ANY-LINK-COLOR:#0000ff;
+    --BODY-BGCOLOR: #f2ebe3;
+    --BUTTON-BGCOLOR: #224a3c;
+    --BUTTON-P-COLOR: #ffffff;
+    --CT--BGCOLOR: #ffffff;
+    --DIGITS-1-COLOR: #3c8067;
+    --DIGITS-2-COLOR: #6c7289;
+    --PERFUME-NAME-COLOR: #1c232b;
+    --PERFUME-P-COLOR: #6c7289;
+    --PERFUME-T-COLOR: #6c7289;
+
+    /* CURSOR */
+    --BUTTON-CURSOR: pointer;
+
+    /* DISPLAY */
+    --CT-DISPLAY: flex;
+    --IMG-DISPLAY: block;
+    --PERFUME-D-DISPLAY: flex;
+    --PERFUME-DISPLAY: grid;
+
+    /* FONT */
+    --BODY-FF: 'Montserrat', 'Fraunces',Georgia, 'Times New Roman', Times, serif;
+    --BODY-FW: 500;
+    --BOX_FS: 1.5rem;
+    --BUTTON-P-FS: 1.2rem;
+    --BUTTON-P-FW: 700;
+    --DIGITS-1-FS: 2rem;
+    --DIGITS-1-FW: 700;
+    --DIGITS-2-FS: 14px;
+
+    /* GAP */
+    --CT-GAP: 1rem;
+
+    /* GRID && FLEX PROPERTIES */
+    --CT-FLEX-DIRECTION: column nowrap;
+    --PERFUME-D-JUSTIFY-CONTENTS: space-between;
+
+    /* MARGIN */
+    --CT-MARGIN: 6rem auto;
+
+    /* PADDING */
+    --PERFUME-PADDING: 2rem;
+
+    /* TEXT */
+    --DIGITS-2-TD: line-through;
+    --PERFUME-P-LH: 25px;
+    --PERFUME-T-LS: 6px;
+    --PERFUME-T-TT: uppercase;
+
+    /* WIDTH */
+    --BODY-MINW: 750px;
+    --CT-MINW: 600px;
+    --CT-WIDTH: 25vw;
+    --PERFUME-WIDTH: 300px;
+}
+
+/* ///////////////GENERAL STYLES\\\\\\\\\\\\\\\*/
+
+body {
+    background-color: var(--BODY-BGCOLOR);
+    font-family: var(--BODY-FF);
+    font-weight: var(--BODY-FW);
+    min-width: var(--BODY-MINW);
+}
+
+.container {
+    background-color: var(--CT--BGCOLOR);
+    border-radius: var(--CT-BORDER-RADIUS);
+    display: var(--CT-DISPLAY);
+    flex-direction: var(--CT-FLEX-DIRECTION);
+    gap: var(--CT-GAP);
+    margin: var(--CT-MARGIN);
+    min-width: var(--CT-MINW);
+    width: var(--CT-WIDTH);
+}
+
+img {
+    border-bottom-left-radius: var(--IMG-BORDER-BL-radius);
+    border-top-left-radius: var(--IMG-BORDER-TL-radius);
+    display: var(--IMG-DISPLAY);
+}
+
+.perfume {
+    display: var(--PERFUME-DISPLAY);
+    padding: var(--PERFUME-PADDING);
+    width: var(--PERFUME-WIDTH);
+}
+
+.perfume__title {
+    color: var(--PERFUME-T-COLOR);
+    letter-spacing: var(--PERFUME-T-LS);
+    text-transform: var(--PERFUME-T-TT);
+}
+
+.perfume__name {
+    color: var(--PERFUME-NAME-COLOR);
+}
+.perfume__p {
+    color: var(--PERFUME-P-COLOR);
+    line-height: var(--PERFUME-P-LH);
+}
+
+.perfume__digits {
+    display: var(--PERFUME-D-DISPLAY);
+    justify-content: var(--PERFUME-D-JUSTIFY-CONTENTS);
+}
+
+.digits__1 {
+    color: var(--DIGITS-1-COLOR);
+    font-size: var(--DIGITS-1-FS);
+    font-weight: var(--DIGITS-1-FW);
+}
+
+.digits__2 {
+    color: var(--DIGITS-2-COLOR);
+    font-size: var(--DIGITS-2-FS);
+    text-decoration: var(--DIGITS-2-TD);
+}
+
+button {
+    background-color: var(--BUTTON-BGCOLOR);
+    border-radius: var(--BUTTON-BORDER-RADIUS);
+    cursor: var(--BUTTON-CURSOR);
+}
+
+button:hover {
+  box-shadow: var(--BUTTON-HOVER-BOX-SHADOW)
+}
+
+button p {
+    color: var(--BUTTON-P-COLOR);
+    font-size: var(--BUTTON-P-FS);
+    font-weight: var(--BUTTON-P-FW);
+}
+
+a:any-link {
+    color: var(--ANY-LINK-COLOR);
+}
+
+.box{
+    font-size: var(--BOX_FS);
+}
